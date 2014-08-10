@@ -8,22 +8,55 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+// @interface ViewController ()
 
-@end
+// @end
 
 @implementation ViewController
+
+@synthesize label = label;
+@synthesize button = button;
+@synthesize webView = webView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self configureView];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)configureView
+{
+    NSLog(@"configureView start!");
+    NSInteger test = 777;
+    NSLog(@"%d ボーナス確定！", test);
+    label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 20.0, 300.0, 40.0)];
+    label.text = @"Hello world!";
+    label.textAlignment = UITextAlignmentCenter;
+    [self.view addSubview:label];
+    
+    button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(40.0, 80.0, 240.0, 40.0);
+    [button setTitle:@"Touch!" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    webView = [[UIWebView alloc] initWithFrame:CGRectMake(10.0, 160.0, 300.0, 280.0)];
+    webView.scalesPageToFit = YES;
+    webView.delegate = self;
+    [self.view addSubview:webView];
+}
+
+- (void)action
+{
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.yahoo.co.jp"]]];
 }
 
 @end

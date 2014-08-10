@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate>
+{
+    UILabel *label;
+    UIButton *button;
+    UIWebView *webView;
+}
+
+@property (strong, nonatomic) UILabel *label;
+@property (strong, nonatomic) UIButton *button;
+@property (strong, nonatomic) UIWebView *webView;
+
+// 表示内容を設定するメソッド
+- (void)configureView;
+
+// ボタンを押した際のメソッド
+- (void)action;
 
 @end
