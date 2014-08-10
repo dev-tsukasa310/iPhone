@@ -37,6 +37,7 @@
     NSLog(@"configureView start!");
     NSInteger test = 777;
     NSLog(@"%d ボーナス確定！", test);
+    
     label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 20.0, 300.0, 40.0)];
     label.text = @"Hello world!";
     label.textAlignment = UITextAlignmentCenter;
@@ -52,6 +53,16 @@
     webView.scalesPageToFit = YES;
     webView.delegate = self;
     [self.view addSubview:webView];
+    
+    // 変数
+    NSString *string1 = @"LOW TON";
+    NSInteger count = 7;
+    CGFloat rating = 5.1;
+    // 文字列は%@、数値は%d、少数は%fで代入する
+    NSString *string2 = [NSString stringWithFormat:@"今日は%@が%d回出ました！", string1, count];
+    NSString *string3 = [NSString stringWithFormat:@"今日のレーティングは%fです！", rating];
+    NSLog(@"%@", string2);
+    NSLog(@"%@", string3);
 }
 
 - (void)action
