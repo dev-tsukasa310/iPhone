@@ -46,6 +46,13 @@
     customView.alpha = 1;
     
     [self.view addSubview:customView];
+    
+    // 画像用の枠を生成
+    UIImageView *customImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 300, 300)];
+    // 表示する画像の設定
+    customImageView.image = [UIImage imageNamed:@"36.png"];
+    
+    [self.view addSubview:customImageView];
 }
 
 @end

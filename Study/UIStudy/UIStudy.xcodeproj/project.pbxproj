@@ -22,6 +22,7 @@
 		202DBB411997C0220036201B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202DBB201997C0220036201B /* UIKit.framework */; };
 		202DBB491997C0220036201B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 202DBB471997C0220036201B /* InfoPlist.strings */; };
 		202DBB4B1997C0220036201B /* UIStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 202DBB4A1997C0220036201B /* UIStudyTests.m */; };
+		202DBB581997C61F0036201B /* 36.png in Resources */ = {isa = PBXBuildFile; fileRef = 202DBB571997C61F0036201B /* 36.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		202DBB461997C0220036201B /* UIStudyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIStudyTests-Info.plist"; sourceTree = "<group>"; };
 		202DBB481997C0220036201B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		202DBB4A1997C0220036201B /* UIStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIStudyTests.m; sourceTree = "<group>"; };
+		202DBB571997C61F0036201B /* 36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 36.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		202DBB221997C0220036201B /* UIStudy */ = {
 			isa = PBXGroup;
 			children = (
+				202DBB561997C61F0036201B /* image */,
 				202DBB2B1997C0220036201B /* AppDelegate.h */,
 				202DBB2C1997C0220036201B /* AppDelegate.m */,
 				202DBB2E1997C0220036201B /* Main_iPhone.storyboard */,
@@ -153,6 +156,14 @@
 				202DBB471997C0220036201B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		202DBB561997C61F0036201B /* image */ = {
+			isa = PBXGroup;
+			children = (
+				202DBB571997C61F0036201B /* 36.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				202DBB331997C0220036201B /* Main_iPad.storyboard in Resources */,
 				202DBB381997C0220036201B /* Images.xcassets in Resources */,
 				202DBB301997C0220036201B /* Main_iPhone.storyboard in Resources */,
+				202DBB581997C61F0036201B /* 36.png in Resources */,
 				202DBB271997C0220036201B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +482,7 @@
 				202DBB501997C0220036201B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		202DBB511997C0220036201B /* Build configuration list for PBXNativeTarget "UIStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +491,7 @@
 				202DBB531997C0220036201B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
